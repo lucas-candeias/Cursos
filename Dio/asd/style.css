@@ -1,0 +1,38 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    grid-template-rows: repeat(6, auto); /* Creates 6 rows */
+    gap: 10px; /* Optional: Adds space between grid items */
+  }
+  
+  /* Span 2 columns for the first two items */
+  .grid-item.item1 {
+    grid-column: span 2;
+  }
+  
+  .grid-item.item2 {
+    grid-column: span 2;
+  }
+  
+  /* Span all 4 columns for the single items in row 2, 3, and 5 */
+  .grid-item.item3,
+  .grid-item.item4,
+  .grid-item.item5 {
+    grid-column: 1 / -1;
+  }
+  
+  /* Span 2 columns in the middle for the item on the fourth row */
+  .grid-item.item6 {
+    grid-column: 2 / span 2;
+  }
+  
+  /* On the sixth row: item7 spans 2 columns, and the others span 1 */
+  .grid-item.item7 {
+    grid-column: span 2;
+  }
+  
+  .grid-item.item8,
+  .grid-item.item9 {
+    grid-column: span 1;
+  }
+  
